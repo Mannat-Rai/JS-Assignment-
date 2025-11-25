@@ -1,0 +1,83 @@
+/* Background */
+body {
+    background: linear-gradient(135deg, #ffb3d9, #ffd8e6, #fff0f7);
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    animation: bgMove 10s infinite alternate ease-in-out;
+}
+
+/* Soft background animation */
+@keyframes bgMove {
+    0% { background-position: left; }
+    100% { background-position: right; }
+}
+
+/* Card Container */
+.container {
+    background: #ffffffcc;
+    backdrop-filter: blur(6px);
+    padding: 30px;
+    width: 380px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(255, 105, 180, 0.25);
+    animation: popUp 0.6s ease;
+}
+
+/* Card pop-in animation */
+@keyframes popUp {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+h2 {
+    color: #ff3c88;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* Joke Text */
+.joke-text {
+    font-size: 17px;
+    color: #333;
+    line-height: 1.4;
+}
+
+.punch {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff0066;
+}
+
+/* Button styling */
+button {
+    margin-top: 20px;
+    background: linear-gradient(135deg, #ff4fa8, #ff7ec8);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 12px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(255, 72, 154, 0.4);
+    transition: 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(255, 50, 140, 0.5);
+}
+
+button:disabled {
+    background: #ffb6d7;
+    box-shadow: none;
+    cursor: not-allowed;
+    transform: none;
+}
