@@ -1,4 +1,4 @@
-// DOM elements
+
 const taskInput = document.getElementById("taskInput");
 const addTaskBtn = document.getElementById("addTaskBtn");
 const taskList = document.getElementById("taskList");
@@ -81,4 +81,5 @@ function deleteTask(taskText) {
     let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
     tasks = tasks.filter(task => task !== taskText);
     localStorage.setItem("tasks", JSON.stringify(tasks));
+
 }
